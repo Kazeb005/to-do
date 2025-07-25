@@ -78,3 +78,15 @@ completedCount.textContent = '0';
 checkEmptyState();
 
 
+const activeTab = 'px-4 py-2 bg-black text-white rounded-md hover:bg-black focus:outline-none focus:ring-2 focus:ring-black';
+const chosTab = document.querySelectorAll('.taskbtn');
+
+chosTab.forEach(tab => {
+    tab.addEventListener('click',() =>{
+        chosTab.forEach(otherTab => otherTab.classList = 'taskbtn px-4 py-2 text-gray-500 font-medium border-gray-300 rounded-md');
+        tab.className = `taskbtn ${activeTab}`;
+    }
+)
+}
+
+)
